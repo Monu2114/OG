@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 const LetThemKnow = ({ setButtonClick }) => {
   const [starIndex, setStarIndex] = useState(-1);
   const [formData, setFormData] = useState({
-    flair: "",
+    flair: "none",
     description: "",
     rating: "",
   });
@@ -54,6 +54,19 @@ const LetThemKnow = ({ setButtonClick }) => {
       <h1 className="text-3xl font-bold text font-sans text-center">
         Tagalabettandi !
       </h1>
+
+      <select
+        onChange={(e) => onChange(e)}
+        name="flair"
+        value={formData.flair}
+        className="border-black border-2 rounded-xl p-2"
+      >
+        <option value="die-hard-fan">Die Hard Fan</option>
+        <option value="edo-ala-fan">Edo ala fan</option>
+        <option value="pspk-fans-association">PSPK Fans Association</option>
+        <option value="hater">Hater</option>
+        <option value="none">None</option>
+      </select>
       <div className="flex">
         {new Array(5).fill(0).map((_, index) => {
           return (

@@ -32,7 +32,7 @@ const PublicTalk = () => {
       {buttonClick && <LetThemKnow setButtonClick={setButtonClick} />}
 
       {/* comments */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="flex flex-wrap gap-4 p-4">
         {comments.map((comment, index) => {
           return <Comment {...comment} key={index} />;
         })}

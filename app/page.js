@@ -4,7 +4,7 @@ import PublicTalk from "./components/PublicTalk";
 
 export default function Home() {
   return (
-    <div className="relative w-fit min-h-screen overflow-hidden">
+    <div className="relative w-screen h-screen overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 bg-[url('/japan.jpg')] bg-cover bg-center bg-no-repeat opacity-25"></div>
 

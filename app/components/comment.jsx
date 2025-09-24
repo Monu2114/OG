@@ -5,6 +5,9 @@ const Comment = ({ rating, flair, description, likes, dislikes }) => {
   return (
     <div className="bg-white shadow-md rounded-xl p-4 w-fit max-w-md border border-gray-200">
       {/* Header: rating + flair */}
+      <span className="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-full">
+        {flair}
+      </span>
       <div className="flex items-center justify-between mb-2">
         <div className="flex gap-2">
           {new Array(5).fill(0).map((_, index) => {
@@ -16,9 +19,6 @@ const Comment = ({ rating, flair, description, likes, dislikes }) => {
             );
           })}
         </div>
-        <span className="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-full">
-          {flair}
-        </span>
       </div>
 
       {/* Description */}
